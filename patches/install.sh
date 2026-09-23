@@ -13,10 +13,10 @@ NC='\033[0m'
 for dir in $dirs ; do
 	cd $rootdirectory
 	cd $dir
-    echo -e "\n${RED}Applying ${NC}$dir ${RED}patches...${NC}\n"
+    printf "\n${RED}Applying ${NC}$dir ${RED}patches...${NC}\n"
 	git apply -v $rootdirectory/device/amazon/mt8163-common/patches/$dir/*.patch
 done
 
 # -----------------------------------
-echo -e "Done !\n"
+printf "Done !\n"
 cd $rootdirectory
